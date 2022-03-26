@@ -41,6 +41,7 @@ impl Component for Counter {
     fn view(&self, ctx: &Context<Self>) -> Html {
         let link = ctx.link();
         let header = "Framework Yew";
+        let h2 = "Img";
 
         html! {
             <main>
@@ -52,6 +53,10 @@ impl Component for Counter {
                     <p>{ "Name : " } { &self.name } </p>
                     <button onclick={link.callback(|_| Msg::AddOne)}>{ "Add +1" }</button>
                     <button onclick={link.callback(|_| Msg::SubstractOne)}>{ "Substract -1" }</button>
+                </div>
+                <div>
+                    <h2 class="color">{ h2 }</h2>
+                    <img src="static/logo.png"/>
                 </div>
             </main>
         }
