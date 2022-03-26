@@ -1,5 +1,8 @@
 # Yew Framework
 
+https://yew.rs/
+https://trunkrs.dev/assets/
+
 ## dependencies
 $ rustup target add wasm32-unknown-unknown
 $ cargo install trunk

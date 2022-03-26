@@ -5,12 +5,12 @@ pub enum Msg {
     SubstractOne,
 }
 
-pub struct Model {
+pub struct Counter {
     pub value_1: i64,
     pub name: String,
 }
 
-impl Component for Model {
+impl Component for Counter {
     type Message = Msg;
     type Properties = ();
 
@@ -45,7 +45,7 @@ impl Component for Model {
         html! {
             <main>
                 <div>
-                    <h1>{ header }</h1>
+                    <h1 class="color">{ header }</h1>
                 </div>
                 <div>
                     <p>{ "Value : " } { self.value_1 }</p>
@@ -60,5 +60,5 @@ impl Component for Model {
 
 fn main() {
     //start app
-    yew::start_app::<Model>();
+    yew::start_app::<Counter>();
 }
